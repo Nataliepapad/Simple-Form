@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            text-align: center;
+        }
+
+        div.container {
+            border-radius: 10px;
+            width: 320px;
+            height: 210px;
+            box-shadow: 0px 0px 1px;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+            margin-bottom:10%;
+            text-align: left;
+        }
+
+        #formBox {
+            text-align: left;
+            letter-spacing: 0px;
+            padding-left: 20px;
+        }
+
+        #title {
+            color: Highlight;
+            font-weight: normal !important;
+        }
+
+        p{
+            margin-bottom:5px;
+        }
+
+        input {
+            width: 90%;
+            height: 30px;
+            border-radius: 7px;
+            border: 1px solid rgba(0, 0, 0, 0.259);
+            transition: 1s;
+        }
+
+            input:focus {
+                outline: none;
+                box-shadow: 0px 0px 4px rgb(40, 128, 251);
+            }
+
+        button {
+            margin-top: 15px;
+            margin-left: 72%;
+            border-radius: 6px;
+            width: 20%;
+            height: 10%;
+            border: 2px solid rgb(40, 128, 251);
+            background-color: white;
+            color: Highlight;
+        }
+    </style>
+
+    <script>
+        function setNumber(givenNumber) {
+            alert('The number you entered is: ' + document.getElementById("givenNumber").value);
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="formBox" action="">
+            <h1 id="title">Form</h1>
+            <p>Number</p>
+            <input id="givenNumber"
+                   type="number"
+                   name="number"
+                   value=""
+                   min="10"
+                   placeholder="Please enter a number" />
+            <button id="btn" type="button" onclick="setNumber()">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
